@@ -11,20 +11,29 @@
     </div>
   <% end %>
 
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.hidden_field :image, value: @photo.cached_image_data %>
+    <%= form.file_field :image %>
+  </div>
+
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title, id: :photo_title %>
   </div>
 
   <div class="field">
-    <%= form.label :image_data %>
-    <%= form.text_area :image_data, id: :photo_image_data %>
-  </div>
-
-  <div class="field">
     <%= form.label :user_id %>
     <%= form.text_field :user_id, id: :photo_user_id %>
   </div>
+
+  <% if @photo.image_data? %>
+    Remove attachment: <%= f.check_box :remove_image %>
+  <% end %>
+
+    <%#= f.label :image %>
+
 
   <div class="actions">
     <%= form.submit %>

@@ -15,6 +15,7 @@
   <tbody>
     <% @photos.each do |photo| %>
       <tr>
+        <td><img src="<%= photo.image_url %>"></td>
         <td><%= photo.title %></td>
         <td><%= photo.image_data %></td>
         <td><%= photo.user %></td>

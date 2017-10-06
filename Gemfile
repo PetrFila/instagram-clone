@@ -10,6 +10,9 @@ gem 'shrine'
 gem 'devise'
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'jquery-rails'
+gem "image_processing"
+gem "mini_magick"
+gem 'fastimage'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
